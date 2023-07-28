@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  </head>
+
+  <header>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+      <div class="container-fluid px-5 py-3">
+        <a class="navbar-brand" href="./index.html">İmtahan Proqramı</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./admin.html">Admin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Dərslər</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./teacher.html">Müəllimlər</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./grades.html">Siniflər</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pupil.html">Şagirdlər</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./exam.html">İmtahanlar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <body>
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Dərs əlavə et
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                
+                <div class="container-fluid px-5 py-5">
+                    <div class="row mb-5">
+                      <div class="mb-3 col-6">
+                        <label for="lessonName" class="form-label">Dərsin adı</label>
+                        <input type="text" class="form-control" id="lessonName" placeholder="Fizika">
+                      </div>
+                      <div class="mb-3 col-6"></div>
+              
+                      <div class="mb-3 col-6">
+                        <label for="lessonCode" class="form-label">Dərsin kodu</label>
+                        <input type="number" class="form-control" id="lessonCode" placeholder="123">
+                      </div>
+                      <div class="mb-3 col-12"></div>
+              
+                      <div class="mb-3 col-2">
+                          <label for="gradesChooseForLesson" class="form-label">Siniflər seçin</label>
+              
+                          <select class="js-example-basic-multiple w-100 gradesChooseForLesson" style="width: 200px;" name="states[]" multiple="multiple">
+                              <option value="AL">7</option>
+                              <option value="WY">8</option>
+                              <option value="WY">9</option>
+                          </select>
+                      </div>
+              
+                      <div class="mb-3 col-12"></div>
+                      <div class="col-auto">
+                        <button type="submit" class="btn btn-primary mb-3">Yeni dərs əlavə et</button>
+                      </div>
+                    </div>
+            
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Müəllim əlavə et
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                
+                <div class="container-fluid px-5 py-5">
+                    <div class="row mb-5">
+                        <div class="mb-3 col-6">
+                          <label for="teacherName" class="form-label">Müəllimin adı</label>
+                          <input type="text" class="form-control" id="teacherName">
+                        </div>
+                        <div class="mb-3 col-6"></div>
+                        <div class="mb-3 col-6">
+                          <label for="teacherSurname" class="form-label">Müəllimin soyadı</label>
+                          <input type="text" class="form-control" id="teacherSurname" >
+                        </div>
+                        <div class="mb-3 col-12"></div>
+              
+                        <!-- <div class="mb-3 col-2">
+                          <label for="lessonName" class="form-label">Dərslər seçin</label>
+              
+                          <select class="js-example-basic-multiple w-100" name="states[Dərslər seçin]" multiple="multiple">
+                              <option value="AL">Fizika</option>
+                              <option value="WY">Kimya</option>
+                              <option value="WY">Riyaziyyat</option>
+                            </select>
+                      </div>
+                      <div class="mb-3 col-12"></div>
+              
+                      <div class="mb-3 col-2">
+                          <label for="lessonName" class="form-label">Siniflər seçin</label>
+              
+                          <select class="js-example-basic-multiple w-100" name="states[Siniflər seçin]" multiple="multiple">
+                              <option value="AL">7</option>
+                              <option value="WY">8</option>
+                              <option value="WY">9</option>
+                            </select>
+                      </div>
+              
+                      <div class="mb-3 col-12"></div> -->
+                        
+                        
+                        <div class="col-auto">
+                          <button type="submit" class="btn btn-primary mb-3">Yeni müəllim əlavə et</button>
+                        </div>
+                      </div>
+
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Sinif əlavə et
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <div class="container-fluid px-5 py-5">
+
+                    <div class="row mb-5">
+                        <div class="mb-3">
+                          <label for="gradesNumber" class="form-label" >Sinifin nömrəsi</label>
+                          <input type="number" class="form-control" id="gradesNumber"  min="1" max="11">
+                        </div>
+                        <div class="col-auto">
+                          <button type="submit" class="btn btn-primary mb-3">Yeni Sinif əlavə et</button>
+                        </div>
+                      </div>
+                </div>
+            
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+              Şagird əlavə et
+            </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <div class="container-fluid px-5 py-5">
+
+                    <div class="row mb-5">
+                        <div class="mb-3 col-6">
+                          <label for="pupilNumber" class="form-label">Şagirdin nömrəsi</label>
+                          <input type="number" class="form-control" id="pupilNumber" >
+                        </div>
+                        <div class="mb-3 col-6"></div>
+                
+                        <div class="mb-3 col-6">
+                          <label for="pupilName" class="form-label">Şagirdin adı</label>
+                          <input type="text" class="form-control" id="pupilName" >
+                        </div>
+                        <div class="mb-3 col-6"></div>
+                
+                        <div class="mb-3 col-6">
+                          <label for="pupilSurname" class="form-label">Şagirdin soyadı</label>
+                          <input type="text" class="form-control" id="pupilSurname" >
+                        </div>
+                        <div class="mb-3 col-12"></div>
+                
+                        <div class="mb-3 col-2">
+                            <label for="gradesChooseForPupil" class="form-label">Sinif seçin</label>
+                
+                            <select class="js-example-basic-single w-100 gradesChooseForPupil" name="states">
+                                <option value="AL">7</option>
+                                <option value="WY">8</option>
+                                <option value="WY">9</option>
+                            </select>
+                        </div>
+                
+                        <div class="mb-3 col-12"></div>
+                        <div class="col-auto">
+                          <button type="submit" class="btn btn-primary mb-3">Yeni şagird əlavə et</button>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseThree">
+              İmtahan əlavə et
+            </button>
+          </h2>
+          <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <div class="container-fluid px-5 py-5">
+
+                    <div class="row mb-5">
+                        <div class="mb-3 col-2">
+                            <label for="lessonChooseForExam" class="form-label">İmtahan olacaq dərsi və sinifi seçin</label>
+                
+                            <select class="js-example-basic-single w-100 lessonChooseForExam" name="states">
+                                <option value="AL">Fizika 7</option>
+                                <option value="WY">Kimya 8</option>
+                                <option value="WY">Riyaziyyat 9</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-12"></div>
+                
+                        <div class="mb-3 col-6">
+                          <label for="examDate" class="form-label">İmtahan saatı</label>
+                          <input type="datetime-local" class="form-control" id="examDate" >
+                        </div>
+                        <div class="mb-3 col-12"></div>
+                
+                        
+                        <div class="col-auto">
+                          <button type="submit" class="btn btn-primary mb-3">Yeni imtahan əlavə et</button>
+                        </div>
+                      </div>
+                </div>
+            
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseThree">
+              Müəllim üçün dərs sinif əlavə et
+            </button>
+          </h2>
+          <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <div class="container-fluid px-5 py-5">
+
+                    <div class="row mb-5">
+                        <div class="mb-3 col-2">
+                            <label for="teacherChoose" class="form-label">Müəllim seçin</label>
+                
+                            <select class="js-example-basic-single w-100 col-2 teacherChoose" name="states">
+                                    <option value="AL">Əli</option>
+                                    <option value="WY">Vəli</option>
+                                    <option value="WY">Xəyalə</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-12"></div>
+              
+                        <div class="mb-3 col-12">
+                            <label for="lessonGradesChoose" class="form-label">DərsSiniflər seçin</label>
+                
+                            <select class="js-example-basic-multiple w-100 lessonGradesChoose" style="width: 250px;" name="states[]" multiple="multiple">
+                                <option value="AL">Fizika 7</option>
+                                <option value="WY">Fizika 8</option>
+                                <option value="WY">Riyaziyyat 9</option>
+                              </select>
+                        </div>
+                
+                        <div class="mb-3 col-12"></div>
+                
+                        
+                        <div class="col-auto">
+                          <button type="submit" class="btn btn-primary mb-3">Yeni imtahan əlavə et</button>
+                        </div>
+                      </div>
+                </div>
+            
+            </div>
+          </div>
+        </div>
+
+        
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseThree">
+                İmtahan nəticələrini əlavə et
+              </button>
+            </h2>
+            <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                  <div class="container-fluid px-5 py-5">
+  
+                      <div class="row mb-5">
+                          <div class="mb-3 col-2">
+                              <label for="examDateChoose" class="form-label">İmtahan tarixi seçin</label>
+                  
+                              <select class="js-example-basic-single w-100 examDateChoose" name="states">
+                                  <option value="AL">10.10.2023</option>
+                                  <option value="WY">11.10.2023</option>
+                                  <option value="WY">12.10.2023</option>
+                              </select>
+                          </div>
+                          <div class="mb-3 col-12"></div>
+                  
+                          <div class="mb-3 col-2">
+                            <label for="pupilChooseforExamResult" class="form-label">Şagird seçin</label>
+                
+                            <select class="js-example-basic-single w-100 pupilChooseforExamResult" name="states">
+                                <option value="AL">Əli</option>
+                                <option value="WY">Əliyar</option>
+                                <option value="WY">Əliqulu</option>
+                            </select>
+                        </div>
+                          <div class="mb-3 col-12"></div>
+                                          
+                        <div class="mb-3 col-6">
+                            <label for="pupilMark" class="form-label">Qiymət</label>
+                            <input type="number" class="form-control pupilMark" id="pupilMark" >
+                          </div>
+                  
+                          <div class="mb-3 col-12"></div>
+                          
+                          <div class="col-auto">
+                            <button type="submit" class="btn btn-primary mb-3">Yeni imtahan əlavə et</button>
+                          </div>
+                        </div>
+                  </div>
+              
+              </div>
+            </div>
+          </div>
+      </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js" integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+  </body>
+</html>
